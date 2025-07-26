@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IELTS Reading Practice</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    #toolbar {
+      position: absolute;
+      display: none;
+      background: rgba(0, 0, 0, 0.75);
+      color: white;
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-size: 14px;
+      gap: 10px;
+      align-items: center;
+      z-index: 1000;
+    }
+    #toolbar button {
+      background: transparent;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    #toolbar button:hover {
+      color: yellow;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans p-6">
+  <div class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-md relative">
+    <h1 class="text-2xl font-bold mb-4">IELTS Practice Passage</h1>
+    <p id="passage" class="mb-6 leading-relaxed select-text">
+      CDI (Center for Digital Innovation) focuses on empowering people through digital learning. 
+      This passage helps IELTS students practice reading comprehension and vocabulary skills effectively.
+    </p>
+
+    <!-- Toolbar -->
+    <div id="toolbar">
+      <button id="highlightBtn">Highlight</button>
+      <button id="removeBtn">Remove</button>
+      <button id="clearBtn">Clear All</button>
+    </div>
+
+    <div id="questions" class="mb-6"></div>
+    <button onclick="checkAnswers()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+      ✅ Check Answers
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
