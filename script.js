@@ -57,7 +57,7 @@ function checkAnswers() {
   });
 
   if (userId) {
-    fetch('https://tgbot-production-010b.up.railway.app/result', {
+    fetch('https://tgbot-production-010b.up.railway.app', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
